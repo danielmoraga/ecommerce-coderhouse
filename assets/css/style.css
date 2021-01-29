@@ -1,0 +1,235 @@
+*,*::before{
+    margin:0;
+    padding: 0;
+}
+
+:root{
+    --main-bg-color:#8829be;
+    --secondary-color:rgb(85, 83, 83);
+    --third-bg-color:rgba(136, 41, 190, .2);
+    --fourth:#f8f8f8;
+
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(85, 83, 83);
+    background-color: #f8f8f8;
+}
+
+h1{
+    font-size: 1.5rem;
+
+}
+h2{
+    font-size: 1.3rem;
+
+}
+h3{
+    font-size: 1.2rem;
+
+}
+
+h1,h2,h3,h4,h5,p{
+    margin:0;
+    padding: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: rgb(161, 158, 158);
+    background-color: rgb(133, 133, 133);
+}
+
+/*miscelaneo*/
+
+
+
+
+
+/*navbar*/
+nav.bg-color,.bg-color{
+    background-color:var(--main-bg-color) !important;
+}
+
+nav a, i, li{
+    color:#fff;
+}
+.logo, .nav-item a , .nav-item a i{
+    transition: ease-in-out 0.3s;
+    color:#fff;
+
+}
+.logo:hover, .nav-item a:hover, .nav-item a i:hover{
+color: bisque;
+}
+
+.btn-outline-success{
+    border: 1px solid var(--main-bg-color) !important;
+}
+
+.btn-outline-success:hover{
+    background-color: var(--main-bg-color) !important;
+}
+.contenedorhero{
+    height: 15rem !important;
+    overflow: hidden;
+}
+
+aside{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.alineacion{
+    display: flex !important;
+    justify-content: end !important;
+}
+
+a{
+text-decoration: none;
+color:var(--secondary-color) ;
+}
+
+a:hover{
+   color: var(--main-bg-color); 
+}
+
+/*principal*/
+.principal{
+    margin-top: 3rem;
+
+}
+
+.lista h1{
+    margin-bottom: 1rem;
+}
+
+.solicitud{
+    margin: 2rem 0;
+}
+.icono i{
+    color: var(--secondary-color);
+}
+.modulo_formulario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: calc(20% - 30px);
+}
+
+.icono, .tituloEtiqueta, .ingresarTexto{
+    margin:1rem 1rem !important;
+}
+
+.ingresarTexto input{
+    width: 500px !important;
+    border-radius: 0.5rem;
+    border:solid 1px var(--main-bg-color);
+    padding: 0.2rem;
+}
+
+.contenedor_solicitud{
+    display: flex;
+    justify-content: start;
+}
+
+
+.card-body h2{
+    color: var(--main-bg-color);
+}
+
+
+
+
+.boton{
+    margin: 1rem 0 3rem 0;
+    background-color: white;
+    color:var(--main-bg-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.boton:hover{
+    background-color: var(--main-bg-color);
+    color:white;
+border: 1px solid var(--main-bg-color);
+}
+
+
+.tamano-valor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tamano-valor h2{
+    padding: 0;
+}
+
+
+/*footer*/
+footer{
+    padding: 1rem 0;
+}
+
+.rrss{
+    display: flex;
+    justify-content: end;
+}
+.iconos p{
+    color:#fff;
+}
+
+/*footer*/
+.boton-carrito{
+    background-color:var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+    margin: 0 2rem;
+    padding: 0.5rem;
+    border:1px solid var(--main-bg-color);
+    color: white;
+    align-items: center;
+}
+
+.boton-carrito a, .boton-carrito i{
+    color: white;
+    margin: 0 1rem;
+}
+
+.boton-carrito:hover{
+background-color:rgba(136, 41, 190, 0.2) ;
+color: white;
+}
+
+
+
+
+
+
+/*carrito*/
+.contendor-foto{
+    overflow: hidden;
+}
+
+.contendor-foto img{
+    max-width: 10rem;
+
+}
+
+.ruta a{
+    font-weight: normal;
+    font-size: 1rem;
+    color: #b1aeae;
+}
+
+.ruta .destacado{
+color: var(--main-bg-color);
+
+}
