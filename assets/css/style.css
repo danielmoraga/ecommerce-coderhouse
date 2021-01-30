@@ -233,3 +233,14 @@ color: white;
 color: var(--main-bg-color);
 
 }
+
+#numerocarrito{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    background-color: var(--main-bg-color);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
