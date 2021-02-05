@@ -43,7 +43,7 @@ UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="a
    
     </nav>     
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
       <div class="container justify-content-center">
         <button class="navbar-toggler my-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -62,12 +62,61 @@ UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="a
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-user"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+              <li class="nav-item d-flex align-items-center" >
+                <a class="nav-link"  href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
+                <div id="numerocarrito"><p>0</p></div>
+              </li>
+              <li>
+                <div class="dropdown mx-4 col-6">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Detalle del carrito
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li id="carrito"></li>
+                    <li class="resumen">
+                      <div class="contenedor-resumen">
+                            <div class="contenedor-titulo-precio">
+                              <h5 class="titulo">Valor Total</h5>
+                            </div>
+                            <div class="contenedor-precio">
+                              <h2  id="precio-total" class="precio-producto">$3000</h2>
+                            </div>
+                            <div class="contendor-btn-carrito">
+                                <a class= "boton-carrito "href="">Pagar<i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
+            
           </div>
 
+<!-- <div class="contendor-carrito-nav justify-content-center">
+                      <div class="row">
+                        <div class="foto-producto">
+                          <div class="contendor-foto">
+                            <img src="https://cdn.shopify.com/s/files/1/0185/9786/products/13_Yaxha_Camel_Frente_sin_mo_o_1300x1300.jpg?v=1569244220" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="title">
+                          <h5>Collar Perro xs</h5>
+                        </div>
+                        <div class="valor">
+                          <h2>$3000</h2>
+                        </div>
+                        <div class="eliminar">
+                        <a onclick= "eliminarproducto()" href="">Eliminar</a>
+                      </div>
+                      </div><hr>
+           -->
+
+
+
+
+
+          
         </div>
       </div>
     </nav>
@@ -94,45 +143,26 @@ UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="a
     </div>
  
   <!--principal-->
-  <div class="ruta container my-4">
-    <h1>Producto</h1>
-    <a class="home" href="index.html">Home ></a><a class="destacado" href="mascarillaUno.html">Producto 1 ></a>
+  <div class="ruta container my-4" id="producto">
+    
   </div>
 <main class="container principal d-flex justify-content-between">
 
   <aside class="col-md-3 d-none d-md-block">
     <div class="lista">
-      <h2>Tipos de Productos</h2>
+      <h1>Tipos de Productos</h1>
       <ul>
-        <li class="my-2"><a href="#">mascarilla tipo 1</a></li>
-        <li class="my-2"><a href="#">mascarilla tipo 1</a></li>
-        <li class="my-2"><a href="#">mascarilla tipo 1</a></li>
-        <li class="my-2"><a href="#">mascarilla tipo 1</a></li>
+        <li class="my-2"><a onclick="filtroPerro()" href="#">Perros</a></li>
+        <li class="my-2"><a onclick="filtroGato()" href="#">Gatos</a></li>
+        <li class="my-2"><a href="#">Animales Exóticos</a></li>
+        <li class="my-2"><a href="#">Servicios Veterinarios</a></li>
 
       </ul>
     </div>
   </aside>
 
   
-  <div class="row row-cols-1 row-cols-2 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="https://cdn.shopify.com/s/files/1/0185/9786/products/13_Yaxha_Camel_Frente_sin_mo_o_1300x1300.jpg?v=1569244220" class="card-img-top" alt="...">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Producto 1</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural</p>
-          <h2 class="card-title text-start mt-4">$3000</h2>
-        </div>
-      </div><hr>
-      <div>
-          <a class= "boton-carrito"href="carrito.html">Añadir a carrito<i class="fas fa-shopping-cart"></i></a>
-      </div>
-    </div>
-  </div>
+  <div class="row row-cols-1 row-cols-2 g-4" id="Producto_talla"></div>
   
 
 </main>
@@ -157,7 +187,7 @@ UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="a
 
 
 
-<script  src="assets/js/scripts.js" ></script> <!-- puse el script  en el head con "defer" y "async" pero siguió cargando el html despues del js por lo que me vi obligado a dejarlo al final del body" -->
+<script  src="assets/js/producto.js" ></script> <!-- puse el script  en el head con "defer" y "async" pero siguió cargando el html despues del js por lo que me vi obligado a dejarlo al final del body" -->
 
 </body>
 
