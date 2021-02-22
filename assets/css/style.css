@@ -292,3 +292,7 @@ color: var(--main-bg-color);
     justify-content: center;
     align-items: center;
 }
+
+.grande{
+    font-size: 5rem;
+}
