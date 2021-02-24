@@ -38,8 +38,8 @@ h1,h2,h3,h4,h5,p{
 hr {
     border: none;
     height: 1px;
-    color: rgb(161, 158, 158);
-    background-color: rgb(133, 133, 133);
+    color: rgb(214, 210, 210);
+    background-color: rgb(194, 193, 193);
 }
 
 /*miscelaneo*/
@@ -291,4 +291,15 @@ color: var(--main-bg-color);
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.grande{
+    font-size: 5rem;
+}
+
+/*estilos añadidos por css*/
+
+.hover{
+    cursor: pointer;
+    background-color: #0fa022 !important;
 }
