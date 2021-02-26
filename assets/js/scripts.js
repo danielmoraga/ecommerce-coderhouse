@@ -3,40 +3,16 @@ let carrito = [];
 let aux = ``;
 let auxiliar = ``;
 var lista;
-let capInput = 0;
-let auxvalor = ``;
 let auxTotal = 0;
 let busqueda = ``;
 
-class Producto_talla {
-  constructor(idProducto, nombreMarca, tallaProducto, precioProducto, stockProducto, imagenProducto, paginaProducto, animalProducto, claseProducto) {
-    this.id = idProducto;
-    this.nombre = nombreMarca;
-    this.talla = tallaProducto;
-    this.precio = precioProducto;
-    this.stock = stockProducto;
-    this.imagen = imagenProducto;
-    this.pagina = paginaProducto;
-    this.animal = animalProducto;
-    this.clase = claseProducto;
-  }
-}
 
 
-let ProductoPerro1 = new Producto_talla(1,"Collar Perro", "XS", 500, 20, "https://cdn.shopify.com/s/files/1/0185/9786/products/13_Yaxha_Camel_Frente_sin_mo_o_1300x1300.jpg?v=1569244220", "collar_perro_XS.html", "perro", "collarPerro1")
-let ProductoPerro2 = new Producto_talla(2,"Collar Perro", "MD", 300, 10, "https://www.tqel.es/1018-large_default/collar-de-piel-para-perros-pequenos-medianos-rojo-marsala.jpg" , "collar_perro_MD.html","perro", "collarPerro2")
-let ProductoGato1 = new Producto_talla(3,"Collar Gato", "XS", 200, 20, "https://m.media-amazon.com/images/I/41fut+Uoi-L._AC_SS350_.jpg", "collar_gato_XS.html", "gato", "collarGato1")
-let ProductoGato2 = new Producto_talla(4,"Collar Gato", "MD", 300, 30, "https://ae01.alicdn.com/kf/HTB1o7lwXZfpK1RjSZFOq6y6nFXaX/Collar-de-gato-personalizado-de-silicona-para-perros-peque-os-Collar-personalizado-para-mascotas-chat-con.jpg", "collar_gato_MD.html", "gato","collarGato2")
-let ProductoGato3 = new Producto_talla(5,"Collar Gato", "LG", 200, 20, "https://m.media-amazon.com/images/I/41fut+Uoi-L._AC_SS350_.jpg", "collar_gato_LG.html", "gato", "collarGato2")
-let ProductoGato4 = new Producto_talla(6,"Collar Gato", "SM", 300, 30, "https://ae01.alicdn.com/kf/HTB1o7lwXZfpK1RjSZFOq6y6nFXaX/Collar-de-gato-personalizado-de-silicona-para-perros-peque-os-Collar-personalizado-para-mascotas-chat-con.jpg" , "collar_gato_SM.html", "gato", "collarGato3")
+window.onload = async function() {
+  let basedeDatos = await traerDatos();
+  console.log(basedeDatos)
+  
 
-
-basedeDatos.push(ProductoPerro1);
-basedeDatos.push(ProductoPerro2);
-basedeDatos.push(ProductoGato1);
-basedeDatos.push(ProductoGato2);
-basedeDatos.push(ProductoGato3);
-basedeDatos.push(ProductoGato4);
 
 for (let i = 0; i < basedeDatos.length; i++) {
   if (basedeDatos[i].stock > 0) {
@@ -150,34 +126,10 @@ numeroProductos();
         }
         total();
 
-/*
-  
-  let gato = basedeDatos.filter(filtrogato =>filtrogato.animal=="gato")
-  
-     
-
-  var boton = document.getElementById("boton-input");
-
-  boton.addEventListener("click", () => {
-  
-    var input = document.getElementById("busqueda");
-    var valor = input.value;
-    auxvalor = `<div><h1 class="grande">${valor}</h1></div>`
-    
-  
-    document.getElementById("ingresoInput").innerHTML = auxvalor; 
-    alert("Se ingresa el codigo html bajo el slider " + auxvalor + "pero se borra inmediatamente") ;
-    
-  });
-
-  function pressboton(){
-   var valorboton = document.getElementById("busqueda").value;
-       auxvalor = `<div><h1 class="grande">${valorboton}</h1></div>`
-document.getElementById("ingresoInput").innerHTML = valorboton; 
-alert("Se ingresa el codigo html bajo el slider " + auxvalor + "pero se borra inmediatamente") ;
-
-  }
-*/
-
-
+      };
+      async function traerDatos() {
+        const response = await fetch("/data.json");
+        const json = await response.json();
+        return json;
+      }
 
